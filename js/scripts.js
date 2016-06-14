@@ -2,38 +2,45 @@
 
 $(document).ready(function()  {
   $("#jawsTicket").click(function() {
-    $("#modalTitle").text("Jaws");
+    $("#modalTitle").text("");
+    $("#modalTitle").append("<h4><input type='hidden' id='movieVal' value='2'>Jaws</input></h4>");
   });
   $("#starWarsTicket").click(function() {
-    $("#modalTitle").text("Star Wars");
+    $("#modalTitle").text("");
+    $("#modalTitle").append("<h4><input type='hidden' id='movieVal' value='4.5'>Star Wars</input></h4>");
   });
   $("#independenceDayTicket").click(function() {
-    $("#modalTitle").text("Indpendence Day");
+    $("#modalTitle").text("");
+    $("#modalTitle").append("<h4><input type='hidden' id='movieVal' value='4'>Independence Day</input></h4>");
   });
   $("#pulpFictionTicket").click(function() {
-    $("#modalTitle").text("Pulp Fiction");
+    $("#modalTitle").text("");
+    $("#modalTitle").append("<h4><input type='hidden' id='movieVal' value='3'>Pulp Fiction</input></h4>");
   });
   $("#theUsualSuspectsTicket").click(function() {
-    $("#modalTitle").text("The Usual Suspects");
+    $("#modalTitle").text("");
+    $("#modalTitle").append("<h4><input type='hidden' id='movieVal' value='2'>The Usual Suspects</input></h4>");
   });
   $("#warCraftTicket").click(function() {
-    $("#modalTitle").text("War Craft");
+    $("#modalTitle").text("");
+    $("#modalTitle").append("<h4><input type='hidden' id='movieVal' value='4'>Warcraft</input></h4>");
   });
+
   $(".purchaseTicket").click(function() {
     $('.blank')[0].reset();
     $("#priceForTicket").text("");
 
-  })
+  });
+
   $("#getPrice").click(function(){
     var ticketType = parseInt($("input:radio[name='optradio']:checked").val());
     var ticketTime = parseInt($("#dropdown option:selected").val());
-    debugger;
-    var ticket = new movieChoice(3,ticketTime,ticketType);
+    var movieVal = parseInt($("#movieVal").val());
+    console.log(movieVal);
+    var ticket = new movieChoice(movieVal,ticketTime,ticketType);
     $("#priceForTicket").text(ticket.moviePrice());
-    console.log(ticket.moviePrice());
     event.preventDefault();
   });
-
 })
 
 //backend logic
