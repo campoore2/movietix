@@ -18,7 +18,7 @@
             <img src="img/jaws.jpg" alt="Jaws" />
             <div class="caption">
               <p>Jaws</p>
-              <p><a href="#" class="btn btn-primary" role="button">Get Ticket</a> </p>
+              <p><a id="jawsTicket" class="btn btn-primary" role="button">Get Ticket</a> </p>
             </div>
           </div>
         </div>
@@ -27,7 +27,7 @@
             <img src="img/force.jpg" alt="" />
             <div class="caption">
               <p>Star Wars The Force Awakens</p>
-              <p><a href="#" class="btn btn-primary" role="button">Get Ticket</a> </p>
+              <p><a id="starWarsTicket" class="btn btn-primary" role="button">Get Ticket</a> </p>
             </div>
           </div>
         </div>
@@ -36,7 +36,7 @@
             <img src="img/iday.jpg" alt="" />
             <div class="caption">
               <p>Independence Day</p>
-              <p><a href="#" class="btn btn-primary" role="button">Get Ticket</a> </p>
+              <p><a id="independenceDayTicket" class="btn btn-primary" role="button">Get Ticket</a> </p>
             </div>
           </div>
         </div>
@@ -45,7 +45,7 @@
             <img src="img/pulp.jpg" alt="" />
             <div class="caption">
               <p>Pulp Fiction</p>
-              <p><a href="#" class="btn btn-primary" role="button">Get Ticket</a> </p>
+              <p><a id="pulpFictionTicket" class="btn btn-primary" role="button">Get Ticket</a> </p>
             </div>
           </div>
         </div>
@@ -54,7 +54,7 @@
             <img src="img/ususpects.jpg" alt="" />
             <div class="caption">
               <p>The Usual Suspects</p>
-              <p><a href="#" class="btn btn-primary" role="button">Get Ticket</a> </p>
+              <p><a id="theUsualSuspectsTicket" class="btn btn-primary" role="button">Get Ticket</a> </p>
             </div>
           </div>
         </div>
@@ -63,8 +63,41 @@
             <img src="img/warcraft.jpg" alt="" />
             <div class="caption">
               <p>Warcraft</p>
-              <p><a href="#" class="btn btn-primary" role="button">Get Ticket</a></p>
+              <p><a id="warCraftTicket" class="btn btn-primary" role="button" data-toggle="modal" data-target="#warcraftModal">Get Ticket</a></p>
             </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="modal fade" id="warcraftModal" role="dialog">
+      <div class="modal-dialog">
+        <div class="modal-content">
+          <div class="modal-header">
+            <button type="button" class="close" data-dismiss="modal">&times;</button>
+            <h4 class="modal-title">Warcraft Movie</h4>
+          </div>
+          <div class="modal-body">
+            <div id="radioList">
+              <h3> Select Ticket Type </h3>
+              <label class="radio-inline"><input type="radio" name="optradio">Military</label>
+              <label class="radio-inline"><input type="radio" name="optradio">Student</label>
+              <label class="radio-inline"><input type="radio" name="optradio">Adult</label>
+              <label class="radio-inline"><input type="radio" name="optradio">Senior</label>
+              <label class="radio-inline"><input type="radio" name="optradio">Child</label>
+            </div>
+            <div id="dropdown">
+              <h3> Select Your Time </h3>
+              <select class="form-control">
+                <option>4:30pm</option>
+                <option>7:00pm</option>
+                <option>10:00am</option>
+                <option>12:00pm</option>
+                <option>2:00pm</option>
+              </select>
+            </div>
+          </div>
+          <div class="modal-footer">
+            <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
           </div>
         </div>
       </div>
